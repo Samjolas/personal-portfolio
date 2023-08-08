@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as a;
+
+.type {
+
+  &__main {
+    font-size: a.$fs-main;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: a.$fw-600;
+  }
+  &__sub {
+    font-size: a.$fs-sub;
+    font-weight: a.$fw-300;
+    text-align: justify;
+  }
+}

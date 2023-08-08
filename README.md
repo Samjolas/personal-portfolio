@@ -1,2 +1,2 @@
-# personal-portfolio
-This a webpage for for a portfolio website for me
+# card-input
+Frontend Mentor - Interactive card details form solution
