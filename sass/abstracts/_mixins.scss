@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as a;
+
+@mixin p-effect {
+  cursor: pointer;
+  scale: 0.975;
+  transition: all 1s;
+}
+
+@mixin text-s {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: a.$color-sub;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin box-size($width) {
+  min-height: $width;
+  min-width: $width;
+}

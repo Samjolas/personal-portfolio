@@ -3,12 +3,9 @@
 .btn {
   display: inline-block;
   text-align: center;
-  background: a.$color-sub;
   color: a.$color-accent;
   border-radius: 1rem;
-  height: 5rem;
   line-height: 5rem;
-  font-size: a.$fs-sub;
   font-weight: a.$fw-400;
   transition: all .5s;
   &:hover {
@@ -23,5 +20,11 @@
 
   &__main {
     max-width: 40rem;
+    font-size: a.$fs-sub;
+    background: a.$color-sub;
+    height: 5rem;
+  }
+  &__sub {
+    height: auto;
   }
 }

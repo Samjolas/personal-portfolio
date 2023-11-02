@@ -11,6 +11,11 @@
   &__sub {
     font-size: a.$fs-sub;
     font-weight: a.$fw-300;
-    text-align: justify;
+    text-align: center;
+    &--white {
+      color: a.$color-sub;
+      padding: 4rem;
+      border: 3px solid a.$color-sub;
+    }
   }
 }

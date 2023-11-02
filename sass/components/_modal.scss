@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as a;
+
+.detail {
+  &__wordpress {
+    grid-area: wordpress; 
+  }
+  &__camera {
+    grid-area: camera; 
+  }
+  &__music {
+    grid-area: music; 
+  }
+  &__realestate {
+    grid-area: realestate; 
+  }
+  &__potfolio {
+    grid-area: potfolio; 
+  }
+  &__ball {
+    grid-area: ball; 
+  }
+  &__idea {
+    grid-area: idea; 
+  }
+  &__tresearch {
+    grid-area: d-research; 
+  }
+  &__github {
+    grid-area: github; 
+  }
+  &__mentor {
+    grid-area: mentor; 
+  }
+  &__codepen {
+    grid-area: codepen; 
+  }
+  &__mail {
+    grid-area: mail; 
+  }
+}
+    
+  
+

@@ -4,6 +4,8 @@ $ff-main: 'Oswald', sans-serif;
 // font size//
 $fs-main: 15rem;
 $fs-sub: 2.7rem;
+$fs-200: 1.5rem;
+
 
 $fs-200: 2.1rem;
 $fs-100: 1.1rem;
@@ -21,6 +23,31 @@ $fw-700: 700;
 $color-main: hsl(0, 0%, 3%);
 $color-sub: hsl(0, 0%, 97%);
 $color-accent: hsl(0, 0%, 47%);
+$linear-gradient: linear-gradient(rgba(158, 158, 158, 0.543), rgba(1, 1, 1, 0.316));
+
+// grid area //
+
+$grid: 
+  'wordpress wordpress d-research camera'
+  'wordpress wordpress music camera'
+  'realestate mentor music github'
+  'realestate potfolio potfolio github'
+  'codepen potfolio potfolio ball'
+  'codepen idea mail ball'
+  ;
+
+// main images //
+$main-bg: url(../images/sam_picsamuel_image.png);
+
+
+// images //
+$wordpress: url(../images/pexels-format-1029757.jpg);
+$camera: url(../images/pexels-bruno-massao-2873486.jpg);
+$music: url(../images/pexels-cottonbro-studio-6686455.jpg);
+$realestate: url(../images/pexels-grayom-18567185.jpg);
+$portfolio: url(../images/pexels-kevin-ku-577585.jpg);
+$ball: url(../images/pexels-tima-miroshnichenko-6078297.jpg);
+$idea: url(../images/pexels-pixabay-207489.jpg);
 
 
 

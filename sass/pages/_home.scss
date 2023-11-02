@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as a;
+@use '../abstracts/mixins' as m;
 
 .hero {
   // clip-path: polygon(0 0, 0 80%, 20% 85%, 70% 90%, 100% 100%, 100% 0);
@@ -6,50 +7,99 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   position: relative;
-  background: a.$color-main url(../images/sam_picsamuel_image.png) no-repeat top right;
+  background: a.$color-main a.$main-bg no-repeat top right;
   background-size: contain;
   background-attachment: fixed;
 }
 
 .about {
-  display: flex;
+  @include m.space-around;
   flex-direction: column;
   height: 90vh;
-  justify-content: space-around;
 }
 
 .detail {
-  font-size: 3rem;
-  height: 100vh;
-  padding: 4rem;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  border-radius: 4rem;
-  background: a.$color-main url(../images/detail_bg.png) no-repeat bottom left;
-  background-size: cover;
-  gap: 4rem;
-  &__main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  grid-template-areas: a.$grid;
+  padding: 5rem;
+  &>*{
+    @include m.center;
+    @include m.box-size(300px);
+    background-size: cover;
+    background-position: center;
+    color: a.$color-main;
+    padding: 4rem;
+    font-size: 2rem;
+  }
+  &__wordpress{
+    background-image: a.$wordpress;
+    &:hover {
+      @include m.p-effect;
+      background-image: a.$linear-gradient, a.$wordpress;
+    }
+  }
+  &__camera{
+    background-image: a.$camera;
+    &:hover {
+      @include m.p-effect;
+      background-image: a.$linear-gradient, a.$camera;
+    }
+  }
+  &__music{
+    background-image: a.$music;
+    &:hover {
+      @include m.p-effect;
+      background-image: a.$linear-gradient, a.$music;
+    }
+  }
+  &__realestate{
+    background-image: a.$realestate;
+    &:hover {
+      @include m.p-effect;
+      background-image: a.$linear-gradient, a.$realestate;
+    }
+  }
+  &__potfolio{
+    background-image: a.$portfolio;
+    &:hover {
+      @include m.p-effect;
+      background-image: a.$linear-gradient, a.$portfolio;
+    }
+  }
+  &__ball{
+    background-image: a.$ball;
+    &:hover {
+      @include m.p-effect;
+      background-image: a.$linear-gradient, a.$ball;
+    }
+  }
+  &__idea{
+    background-image: a.$idea;
+    &:hover {
+      @include m.p-effect;
+      background-image: a.$linear-gradient, a.$idea;
+    }
+  }
+  &__tresearch, &__github, &__mentor, &__codepen, &__mail {
+    @include m.text-s;
+  }
+  &__wordpress,&__camera,&__music,&__realestate,&__potfolio,&__ball,&__idea {
+    transition: all 1s;
+    & > *{
+      display: none;
+    }
+    &:hover>* {
+      display: flex;
+    }
   } 
-}
-
-@media screen and (max-width: 1120px) {
-  .detail {
-    grid-template-columns: 1fr 1fr;
+  &__icon {
+    font-size: 4rem;
+    color: a.$color-main;
+  }
+  &__para {
+    font-weight: a.$fw-300;
+    font-style: italic;
   }
 }
-@media screen and (max-width: 1120px) {
-  .detail {
-    grid-template-columns: 0fr 1fr;
-    height: auto;
-    &__main {
-      gap: 4rem;
-    } 
-  }
-}
-
-
-
-
