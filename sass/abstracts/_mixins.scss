@@ -9,6 +9,8 @@
 @mixin text-s {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   gap: 2rem;
   background: a.$color-sub;
 }
@@ -26,6 +28,6 @@
 }
 
 @mixin box-size($width) {
-  min-height: $width;
   min-width: $width;
+  min-height: $width;
 }

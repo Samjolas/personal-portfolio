@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   position: relative;
-  background: a.$color-main a.$main-bg no-repeat top right;
+  background: a.$linear-gradient, a.$color-main a.$main-bg no-repeat bottom right;
   background-size: contain;
   background-attachment: fixed;
 }
@@ -15,18 +15,23 @@
 .about {
   @include m.space-around;
   flex-direction: column;
+  gap: 2rem;
   height: 90vh;
+}
+
+.target {
+  position: relative;
 }
 
 .detail {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
   grid-template-areas: a.$grid;
   padding: 5rem;
   &>*{
-    @include m.center;
-    @include m.box-size(300px);
+    display: flex;
+    flex-wrap: wrap;
+    @include m.box-size(30rem);
     background-size: cover;
     background-position: center;
     color: a.$color-main;
@@ -87,6 +92,7 @@
   }
   &__wordpress,&__camera,&__music,&__realestate,&__potfolio,&__ball,&__idea {
     transition: all 1s;
+    @include m.center;
     & > *{
       display: none;
     }
@@ -101,5 +107,53 @@
   &__para {
     font-weight: a.$fw-300;
     font-style: italic;
+  }
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+  .detail {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .detail {
+    padding: 0rem;
+    display: grid;
+    grid-template-areas: 
+    'realestate d-research'
+    'github music'
+    'potfolio mentor'
+    'codepen wordpress'
+    'idea mail'
+    'camera ball';
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    padding: 4rem;
+    grid-template-rows: 1fr 0fr;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+  }
+  .detail {
+    padding: 0rem;
+    display: grid;
+    grid-template-areas: 
+    'realestate'
+    'd-research'
+    'music'
+    'github'
+    'potfolio'
+    'mentor'
+    'wordpress'
+    'codepen'
+    'idea'
+    'mail'
+    'camera'
+    'ball';
   }
 }

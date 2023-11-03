@@ -19,12 +19,19 @@
   }
 
   &__main {
-    max-width: 40rem;
+    max-width: 30rem;
     font-size: a.$fs-sub;
     background: a.$color-sub;
     height: 5rem;
+    padding: 0 5rem;
   }
   &__sub {
     height: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btn{
+    margin: auto;
   }
 }

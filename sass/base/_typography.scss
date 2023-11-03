@@ -1,7 +1,6 @@
 @use '../abstracts/variables' as a;
 
 .type {
-
   &__main {
     font-size: a.$fs-main;
     text-transform: uppercase;
@@ -11,12 +10,33 @@
   &__sub {
     font-size: a.$fs-sub;
     font-weight: a.$fw-300;
-    text-align: justify;
     &--white {
       color: a.$color-sub;
       padding: 4rem;
       border: 3px solid a.$color-sub;
       text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .type {
+    &__main {
+      font-size: 10rem;
+    }
+    &__sub {
+      font-size: a.$fs-200;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .type {
+    &__main {
+      font-size: 8rem;
+    }
+    &__sub {
+      font-size: a.$fs-200;
     }
   }
 }
